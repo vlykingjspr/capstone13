@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root
+{
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --xblue: #025193;
+    --xblue2: #0058A1;
+    --tgray: #F5F5F5;
+    --xgreen:#3E897B;
+    --bgray: #DCDBD7;
+    --sgreen: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    --stgreen: #58A773;
+    --yellow: #F8BD00;
+    --red: #E33629;
+    --dashgreen: rgba(4, 95, 35, 0.5);
+    --dashblue: rgba(2, 81, 147, 0.5);
+    --dashgray: #D9D9D9;
+}
+
+
+/*-------------------------------------tabs--------------------------------------------*/
+
+.tab-container
+{
+    display: flex; float: left; margin: auto;
+}
+
+.tab-container a
+{
+    text-decoration: none;
+}
+
+.tab
+{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 150px; 
+    height: 35px; 
+    background-color: var(--dashgray); 
+    margin: auto; 
+    padding-inline: 1rem; 
+    text-wrap: wrap; 
+    border-radius: 0 1.5rem 0 0; 
+    border-style: none; 
+    cursor:pointer;
+}
+
+.tab-active
+{
+    background-color: var(--xblue);
+}
+
+.tab-text
+{
+    color: white; 
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+/*----------------------------sectionhead-profile--------------------------------------------*/
+.sechead-prof-img
+{
+    height: 150px; 
+    width: 150px; 
+    border-radius:50%;
+}
+
+.sechead-prof-container
+{
+    margin-left: auto; 
+    margin-right:auto; 
+    text-align:center; 
+    text-wrap: wrap;
+}
+
+.no-margin
+{
+    margin: 0;
+}
+
+.sechead-main-container
+{
+    display: flex; 
+    justify-content: 
+    center;
+    flex-direction:column; 
+    width: 100%; 
+    border-bottom: 1.5px solid rgb(235, 235, 235);
+}
+
+.profile-subtitle
+{
+    font-weight: 300;
+    color: var(--white);
+    font-size: 15px;
+    margin:0;
+}
+
+.profile-title
+{
+    font-weight: 500;
+    color: var(--white);
+    font-size: 22px;
+    margin:0;
+}
+
+
+/*----------------------------------Dashbord------------------------------------------------------*/
+.main-dash-container
+{
+    display: flex;
+    padding: 1rem;
+
+}
+
+.cards
+{
+    color: black; 
+    border-radius: 10px; 
+    min-width: 15rem; 
+    padding-inline: 1rem; 
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 2px solid #c9cbce9f;;
+}
+
+.card-header
+{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card-count
+{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.card-container
+{
+    display: flex; margin: auto; flex-wrap: wrap;
+}
+
+.card-txt
+{
+    font-size: 15px;
+}
+
+.color1
+{
+    background-color: var(--dashgray);
+}
+
+.color2
+{
+    background-color: var(--dashblue);
+}
+
+.color3
+{
+    background-color: var(--dashgreen);
+}
+
+.status-btn
+{
+    text-align:center; padding: 5px; border-radius: 5px; border-style:none; cursor: pointer; background-color: #F8BD00; color: white;
+}
+
+@media only screen and (max-width: 1366px)
+{
+    /*cards*/
+    .cards
+    {
+        color: black; 
+        border-radius: 10px; 
+        min-width: 12rem; 
+        padding-inline: 1rem; 
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border: 2px solid #c9cbce9f;;
+    }
+    
+    .card-header
+    {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    .card-count
+    {
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    .card-txt
+    {
+        font-size: 13px;
+    }
+
+
+    /*tabs*/
+    .tab
+    {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        width: 115px; 
+        height: 28px; 
+        background-color: var(--dashgray); 
+        margin: auto; 
+        padding-inline: 1rem; 
+        text-wrap: wrap; 
+        border-radius: 0 1.5rem 0 0; 
+        border-style: none; 
+        cursor:pointer;
+    }
+    
+    .tab-active
+    {
+        background-color: var(--xblue);
+    }
+
+    .tab-text
+    {
+        color: white; 
+        font-size: 10px;
+        font-weight: 300;
+    }
+
+
+    /*section head profile*/
+    .sechead-prof-img
+    {
+        height: 100px; 
+        width: 100px; 
+        border-radius:50%;
+    }
+
+    .profile-subtitle
+    {
+        font-weight: 300;
+        color: var(--white);
+        font-size: 12px;
+        margin:0;
+    }
+
+    .profile-title
+    {
+        font-weight: 500;
+        color: var(--white);
+        font-size: 16px;
+        margin:0;
+    }
+
+    .status-btn
+    {
+        text-align:center; padding: 3px; border-radius: 5px; border-style:none; cursor: pointer; background-color: #F8BD00; color: white;
+    }
+    
+}

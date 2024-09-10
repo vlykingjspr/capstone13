@@ -1,0 +1,57 @@
+.custom-ok-button {
+    background-color: #4CAF50 !important; 
+    color: white !important;               
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    border: none;                          
+    padding: 10px 20px;                   
+    border-radius: 5px;                    
+    outline: none;                         
+}
+
+.custom-ok-button:hover {
+    background-color: #45a049 !important;  
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.custom-ok-button:focus {
+    outline: none;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);                       
+}
+
+@media only screen and (max-width: 1366px)
+{
+    .custom-ok-button {
+        background-color: #4CAF50 !important; 
+        color: white !important;               
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+        border: none;                          
+        padding: 8px 15px;                   
+        border-radius: 5px;                    
+        outline: none;
+        font-size: 13px;                         
+    }
+
+    .custom-swal-popup {
+        max-width: 500px; 
+        width: 100%; 
+    }
+    
+    .custom-swal-title {
+        font-size: 20px; /* Adjust title font size */
+    }
+
+    .custom-swal-text {
+        font-size:8px; 
+    }
+
+    .custom-swal-content {
+        font-size: 0.9rem; 
+        line-height: 1.4; 
+    }
+    
+    .custom-swal-confirm-button, 
+    .custom-swal-cancel-button {
+        padding: 8px 15px; /* Adjust button padding for better touch target size */
+        font-size: 13px; /* Adjust button font size */
+    }
+}

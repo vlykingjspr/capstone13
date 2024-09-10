@@ -1,0 +1,768 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root
+{
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --xblue: #025193;
+    --xblueh: #003159;
+    --tgray: #F5F5F5;
+    --xgreen:#3E897B;
+    --bgray: #DCDBD7;
+    --grayp: #D9D9D9;
+    --congreen: #3E897B;
+    --sgreen: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    --stgreen: #58A773;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+iframe
+{
+    display: none;
+}
+
+.license-background
+{
+    background-image: url("../img/panabs.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.menu 
+{
+    width: 0%;
+    height: 100%;
+}
+
+.dash-body
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 15px 15px;
+    overflow-x: hidden;
+    overflow-y:auto;
+}
+
+.fg-newreg-items
+{
+    display: block;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    font-size: 12px;
+    animation: transitionIn-X-right 0.4s;
+}
+
+.fgnew-card
+  {
+    display: flex;
+    flex-direction: column;
+    width: 80rem;
+    background-color: var(--white);
+    margin: 20px;
+    border-radius: 10px;
+    color: var(--white);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .fgnew-card-slim-s
+  {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    margin: 10px;
+    color: var(--white);
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  .total-card
+{
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+    width: 38.5rem;
+    height: 4rem;
+    margin: 10px;
+    border-radius: 10px;
+    color: var(--black1);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.total-card-items 
+{
+    padding-inline: 1rem;
+ 
+}
+
+.fg-header
+{
+    font-weight: bold;
+    font-size: 1rem;
+    padding-inline: 1rem;
+    background-color: var(--xblue);
+    color: var(--white);
+    border-radius: 10px 10px 0 0; 
+}
+
+.fg-header-slim
+{
+    font-weight: bold;
+    font-size: 1rem;
+    padding-inline: 1rem;
+    background-color: var(--xblue);
+    color: var(--white);
+}
+
+.fgnew-ph
+{
+    color: var(--white);
+    background-color: var(--xblue);
+    width: 15%;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.fgnew-ph2
+{
+    color: var(--white);
+    background-color: var(--xblue);
+    width: 25%;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.fgnew-ph4
+{
+    color: var(--white);
+    background-color: var(--xblue);
+    width: 45%;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.fgnew-ph3 
+{
+    padding-inline: 2px;
+    color: var(--white);
+    background-color: var(--xblue);
+    width: 100%;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.fgnew-ph5 p
+{
+    padding-inline: 2px;
+    color: var(--white);
+    background-color: var(--xblue);
+    width: 100%;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.fgnew-con
+{
+    padding-inline: 1rem;
+}
+
+.fgnew-con1
+{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.fgcon-for-chkbx
+{
+    display: flex;
+    justify-content: center;
+}
+
+.fg-con-check
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10rem;
+}
+
+.fg-con-card
+{
+    display:flex;
+    flex-direction: column;
+    width:30px;
+}
+
+
+
+.fg-fields
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fg-fields-slim
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fg-fields6
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fg-fields3
+{
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+}
+
+.fg-fields4
+{
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between;
+}
+
+.fg-fields2
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right:10rem;
+    width:20rem;
+}
+
+.fg-fields-L
+{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.fg-fields-input
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.fg-fields-input-1
+{
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+.fg-fields-input-2
+{
+    display: flex;
+    margin-left: 1rem;
+}
+
+.fg-fields-input-3
+{
+    display: flex;
+    margin-left: 1rem;
+    justify-content: space-between;
+}
+
+.input-txt
+{
+    font-size: 1.01rem;
+    width: 20rem;
+    height: 45px;
+    border-style: none;
+    background-color: var(--tgray);
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.input-txtS
+{
+    position: relative;
+    font-size: 1rem;
+    width: 15rem;
+    height: 25px;
+    border-style: none;
+    background-color: var(--tgray);
+    outline: none;
+}
+
+.input-txt-L
+{
+    font-size: 1.01rem;
+    width: 28rem;
+    height: 45px;
+    border-style: none;
+    background-color: var(--tgray);
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.input-txt1
+{
+    font-size: 1.01rem;
+    width: 100%;
+    height: 45px;
+    border-style: none;
+    background-color: var(--tgray);
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.input-txt-slim
+{
+    font-size: 1.01rem;
+    height: 45px;
+    border-style: none;
+    background-color: var(--tgray);
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: right;
+}
+
+.input-txtM
+{
+    font-size: 1.01rem;
+    width: 15rem;
+    height: 45px;
+    border-style: none;
+    background-color: var(--tgray);
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.input-txt2
+{
+    font-size: 1.01rem;
+    width: 33rem;
+    height: 45px;
+    border-style: none;
+    background-color: var(--tgray);
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.input-drp
+{
+    font-size: 1.01rem;
+    width: 7rem;
+    height: 45px;
+    border-style: none;
+    background-color: var(--tgray);
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.input-drp-slim
+{
+    font-size: 1.01rem;
+    width: 7rem;
+    height: 45px;
+    border-style: none;
+    background-color: var(--tgray);
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: right;
+}
+
+.input-drp-s
+{
+    font-size: 1.01rem;
+    width: 4rem;
+    height: 45px;
+    border-style: none;
+    background-color: var(--tgray);
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.input-drp-L
+{
+    font-size: 1.01rem;
+    width: 20rem;
+    height: 45px;
+    border-style: none;
+    background-color: var(--tgray);
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.lbl
+{ 
+    color: var(--black1);
+    font-weight:500;
+}
+
+.lbl1
+{ 
+    color: var(--black1);
+    font-size: 0.9rem;
+    font-weight:500;
+    text-align: center;
+}
+
+.fg-fields-check
+{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2rem;
+    width:50%;  
+}
+
+.fg-fields-check-slim
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.fgch
+{
+    display: flex;
+    justify-content: center;
+}
+
+.check-box
+{
+  margin: 15px;
+  display: flex;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1.10rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: var(--black1);
+}
+
+/*.check-box input
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}*/
+
+.check-box .lbl 
+{
+    font-size: small;
+    font-weight: 500;
+}
+
+.check-box1
+{
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 1.10rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: var(--black1);
+}
+
+.check-box .cbox
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--tgray);
+}
+
+.check-box:hover input ~ .checkmark 
+{
+    background-color: var(--grayp);
+}
+
+.check-box input:checked ~ .checkmark 
+{
+    background-color: var(--xblue);
+}
+
+.checkmark:after 
+{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.check-box input:checked ~ .checkmark:after 
+{
+    display: block;
+}
+
+.check-box .checkmark:after 
+{
+    left: 9px;
+    top: 5px;
+    width: 8px;
+    height: 13px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.ot-opt
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.opt-lbl
+{
+    color: var(--black1);
+    font-weight:500;
+}
+
+.opt-txt
+{
+    font-size: 1.01rem;
+    width: 40rem;
+    height: 45px;
+    border-style: none;
+    background-color: var(--tgray);
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+zcon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pcon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;    
+}
+
+.pcon-items
+{
+    margin: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.pcon-butt
+{
+    display: block;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border-style: none;
+    background-color: var(--xblue);
+    padding: 1.3rem;
+    color: var(--white);
+}
+
+.pcon1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+}
+
+.pcon-items1
+{
+    text-align: center;
+    display: flex;
+    margin: 5px;
+    font-size: 1.2rem;
+}
+
+.pcon-butt1
+{
+    display: block;
+    font-size: 1.1rem;
+    margin: 10px;
+    border-radius: 12px;
+    border-style: none;
+    background-color: var(--xblue);
+    color: var(--white);
+    padding: 1.3rem;
+}
+
+.sc-con
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gen-con
+{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gen-items
+{
+    font-size: 1.2rem;
+    color: var(--congreen);
+}
+
+.g-butt
+{
+    font-size: 1.1rem;
+    margin: 10px;
+    border-radius: 12px;
+    border-style: none;
+    background-color: var(--xblue);
+    color: var(--white);
+    padding: 1.3rem;
+}
+
+.qcon
+{
+    color: var(--black1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-inline: 2rem;
+    font-size: 1rem;
+}
+
+
+
+.qcon-cbox
+{
+    padding: 0;
+    flex-direction: column;
+    display: flex;
+    justify-content: left;
+}
+
+.qcon-items
+{
+    display: flex;
+    align-items: center;
+}
+
+.qcon-input-text
+{
+    font-size: 1rem;
+    width: 20rem;
+    height: 30px;
+    border-style: none;
+    background-color: none;
+    outline: none;
+    border-bottom: 1px solid var(--black1);
+    padding-left: 10px;
+}
+
+#img-prev1
+{
+    display: block;
+    justify-content: center;
+    width:13rem; height:13rem;
+    border-radius: 50%; cursor:pointer; border-style:outset; border-color:var(--xblue);
+}
+
+#img-prev2
+{
+    display: block;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+}
+
+
+#drop-area
+{
+    display: block;
+    justify-content: center;
+    height: 300px;
+    width: 300px;
+}
+/*------------------------------------------------------------------------------------table--------------------------------------------------------------------------------------------------------*/
+.table-con
+{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: red;
+}
+
+.dds
+{
+    display: inline-table;
+    position: static;
+    border-collapse: separate;
+
+}
+.th-head
+{
+    position: relative;
+}
+
+/*-----------------------------------------------------------------------------------navigation-----------------------------------------------------------------------------------------------------*/
+.fcon 
+{
+    display: none;
+    animation: transitionIn-X-right 0.4s;
+    
+}
+
+.fcon-active
+{
+    display: block;
+    margin: auto;
+    
+}
+

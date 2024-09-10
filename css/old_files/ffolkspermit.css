@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root
+{
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --xblue: #025193;
+    --tgray: #F5F5F5;
+    --xgreen:#3E897B;
+    --bgray: #DCDBD7;
+    --sgreen: background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+
+    --stgreen: #58A773;
+}
+
+.permit-con-items/*permit-sec*/
+  {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+    animation: transitionIn-Y-over 0.5s; 
+  }
+
+.permit-card/*permit-sec*/
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+    height: 25rem;
+    background-color: var(--xblue);
+    margin: 30px;
+    border-radius: 10px;
+    padding-top: 6rem;
+    color: var(--white);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+.p-butt button/*permit-sec*/
+{
+    border-style: solid;
+    border-color: var(--white);
+    border-radius: 10px;
+    width: 10rem;
+    padding: 10px;
+    background-color: transparent;
+
+}
+
+.p-butt button:hover/*permit-sec*/
+{
+    transform: translateY(-2px);
+    transition: 0.3s;
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+.p-butt button a/*permit-sec*/
+{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--white);
+}
+
+
+  /***--------------------------------------------------------------------------Reponsive-Area----------------------------------------------------------*****/
+@media only screen and (max-width: 1366px)
+{
+  
+  .permit-con-items/*permit-sec*/
+  {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 4.5rem;
+    animation: transitionIn-Y-over 0.5s;
+  }
+
+.permit-card/*permit-sec*/
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--xblue);
+    margin: 15px;
+    border-radius: 10px;
+    padding-top: 3rem;
+    color: var(--white);
+  }
+
+
+}

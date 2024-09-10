@@ -1,0 +1,723 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root
+{
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --xblue: #025193;
+    --xblue2: #0058A1;
+    --tgray: #F5F5F5;
+    --xgreen:#3E897B;
+    --bgray: #DCDBD7;
+    --sgreen: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    --stgreen: #58A773;
+    --yellow: #F8BD00;
+    --red: #E33629;
+    --dropwhite: rgba(255,255, 255, 1);
+    --dropgray: #EEEEEE;
+
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    border-spacing: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh; 
+    background-color: var(--xblue);    
+}
+
+*, ::after, ::before
+{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.animx
+{
+    animation: transitionIn-X 0.5s;
+}
+
+.animy
+{
+    animation: transitionIn-Y-over 0.5s;
+}
+/*------------------------------------------side---nav------------------------------------*/
+
+.menu
+{
+    width: 13%;
+    height: 100%;
+    background: var(--xblue);
+    overflow-x: hidden;
+    
+}
+
+.dash-body
+{  
+    width: 87%;
+    height: 100%;
+    background-color: var(--tgray);
+    border-radius: 15px 0 0 15px;
+    box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.3);
+}
+
+.menu-logo
+{
+    width: 100%;
+}
+
+.menu-container
+{
+    width:100%;
+    border-spacing: 0;
+}
+
+.menu-row {
+    position: relative; /* Ensure the dropdown container is positioned relative to the menu item */
+}
+
+.dropdown 
+{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content 
+{
+    display: none;
+    position: absolute;
+    background-color: var(--dropwhite);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    animation: transitionIn-Y-over 0.2s;
+}
+
+.dropdown-content .ref {
+    color: var(--xblue);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content .ref:hover 
+{
+    background-color: var(--dropgray);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-row tr
+{
+    padding: 100px;
+}
+
+.menu-text
+{
+    padding-left: 10%;
+    font-weight: 500;
+    font-size: 14px; 
+}
+
+.menu-row a, p 
+{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.menu-active p
+{
+    font-weight: bolder;
+}
+.menu-row p:hover
+{
+    transform: scale(1.02);
+    transition: 0.1s;
+    font-weight:bold;
+}
+
+.title
+{
+    width: 100%;
+}
+
+.title p :active
+{
+    font-weight: bolder;
+}
+/*---------------------------------------------------dashboard----------------------------------------------------*/
+.dhead
+{
+    font-size: 23px;
+}
+
+.href_nodesign
+{
+    text-decoration: none; 
+    color: var(--white);
+    font-weight: 500;
+}
+
+.icon-size
+{
+    font-size: 20px;
+    margin-inline:2px;
+    font-weight: bold;
+}
+
+.icon-delete
+{
+    color:red;
+}
+
+.icon-view
+{
+    color: var(--xblue)
+}
+
+.icon-edit
+{
+    color: var(--xblue)
+}
+
+
+
+.profile-menu 
+{
+    position: relative;
+    display: flex;
+    cursor: pointer;
+}
+
+.profile-menu-items
+{
+    display: flex; margin: auto;
+}
+
+.space
+{
+    margin: 10px;
+}
+
+.prof-divider
+{
+    display: flex; margin: auto;
+    border-bottom: 1.5px solid rgb(235, 235, 235);
+}
+
+.dropdown-content-prof 
+{
+    font-size: 15px;
+    animation: transitionIn-Y-over 0.3s;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    right: 2rem;
+    top: 80px; /* Adjust based on the height of your profile icon */
+}
+
+.img-profile
+{
+    border-radius:50%; height:50px; width:50px;
+}
+
+.img-notif
+{
+    height:30px; width:30px;
+}
+
+.selector
+{
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.dropdown-content-prof a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content-prof a:hover {
+    background-color: #f1f1f1;
+}
+
+.style-inline
+{
+    padding-inline: 1rem;
+}
+
+.style-inline1
+{
+    padding-inline: 2rem;
+}
+
+
+.dash-body .header-searchbar
+{
+    width: 50%;
+    border-radius: 50px;
+    outline: none;
+    border: 0.5px solid rgb(226, 226, 226);
+}
+
+input[type=search] 
+{
+    background-image: url('../img/icons/search.svg');
+    background-position: 10px 50%;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+    padding: 15px 25px 15px 40px;
+}
+
+input[type=search]:focus 
+{
+    transition: 0.5s;
+}
+
+.dashboard-items
+{
+    border: 2px solid #c9cbce9f;
+    border-radius: 15px;
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    animation: transitionIn-Y-over 0.5s;
+    /*background-color: #d8ebfa25 ;*/
+    /*box-shadow: 0 3px 5px 0 rgba(95, 95, 97, 0.3);*/
+}
+
+.filter-container
+{
+   border-collapse: separate;
+   border-spacing: 0.8rem;
+}
+
+.filter-container td
+{
+    opacity: 50%;
+    color: var(--white);
+    width: 25%;
+}
+
+.h1-dashboard{
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 0;
+    padding: 15px;
+  }
+  
+.h3-dashboard
+  {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white);
+    padding: 15px;
+  }
+
+/*---------------------------------------------------------TABLE--------------------------------------------------------------------------*/
+
+.abc
+{ 
+    width: 100%;
+    height: 44.5rem;
+    overflow: auto;
+}
+
+.space-top
+{
+    padding-top: 1rem;
+}
+
+.space-bot
+{
+    padding-bottom: 1rem;
+}
+
+.sub-table 
+{
+    border-collapse: collapse;
+    background-color: var(--white);
+}
+
+.sub-table tbody tr
+{
+    border-bottom: 1px solid var(--bgray);
+}
+
+.sub-table thead th
+{
+    color: var(--white);
+}
+
+.table-headin
+{
+    font-size: 12px;
+    font-weight: 300;
+    padding: 8.5px;
+    /*border-bottom: 3px solid var(--primarycolor);*/
+    background-color: var(--xblue);
+    position: sticky;
+}
+
+.table-con
+{
+    text-align: center;
+}
+
+.table-con td
+{
+    font-size: 13px;
+    padding: 0.2rem;
+}
+
+.nametd
+{
+    width: 15%;
+}
+
+.gentd
+{
+    width: 5%;
+}
+
+.headert th
+{
+    top: 0;
+    position: sticky;
+}
+
+
+/*----------------------------------buttons-----------------------------------------------------*/
+
+.stats-complete
+{
+     text-align:center; padding: 3px 5px; border-radius: 5px;cursor: default;border-style:none;background-color: var(--stgreen); color: white; 
+}
+
+.stats-pending
+{
+   text-align:center; padding: 3px 5px; border-radius: 5px; border-style:none;cursor: default; background-color: var(--yellow); color: white;
+}
+
+.stats-expiry
+{
+     text-align:center; padding: 3px 5px; border-radius: 5px; border-style:none; cursor: default; background-color: var(--red); color: white;
+}   
+
+.act-butt
+{
+    border-style: none;
+    background-color: transparent;
+    margin-left: 1rem;
+}
+
+.act-butt :hover
+{
+    transform: scale(1.5);
+    transition: 0.4s ease-in-out;
+}
+
+.sort-butt
+{
+    border-style: none;
+    padding: 0.6rem;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+}
+
+.back-butt
+{
+    border-style: none;
+    background-color: transparent;
+}
+
+.back-img
+{
+    height: 30px;
+}
+
+.butt-con
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    padding-inline: 2rem;
+}
+
+.btn
+{
+    font-size: 15px;
+    border-style: none;
+    background-color: transparent;
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--xblue);
+    text-decoration: none;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.btn-inactive
+{
+    font-size: 15px;
+    border-style: none;
+    background-color: transparent;
+    color: var(--white);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--bgray);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.wrapper-butt
+{
+    text-align: center;
+}
+
+.nav-buttons
+{
+    font-size: 1.1rem;
+    position: absolute;
+    border-radius: 12px;
+    border-style: none;
+    background-color: var(--xblue);
+    color: var(--white);
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+  /***--------------------------------------------------------------------------Reponsive-Area----------------------------------------------------------*****/
+@media only screen and (max-width: 1366px)
+{
+
+    .menu
+    {
+        width: 13%;
+        height: 100%;
+        background: var(--xblue);
+        overflow-x: hidden;
+        
+    }
+
+    .dash-body
+    {  
+        width: 87%;
+        height: 100%;
+        background-color: var(--tgray);
+        border-radius: 15px 0 0 15px;
+        box-shadow: 0px 2px 18px 0px rgba(0,0,0,0.3);
+        overflow-y: scroll;
+    }
+/*---------------dropdown-side----------------*/
+    .dropdown-content 
+    {
+        font-size: 11px;
+        display: none;
+        position: absolute;
+        background-color: var(--dropwhite);
+        min-width: 130px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        animation: transitionIn-Y-over 0.2s;
+    }
+/*---------------dropdown-prof----------------*/
+.dropdown-content-prof 
+{
+    font-size: 12px;
+    animation: transitionIn-Y-over 0.2s;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    right: 2rem;
+    top: 60px; /* Adjust based on the height of your profile icon */
+}
+
+.img-profile
+{
+    border-radius:50%; height:40px; width:40px;
+}
+
+.img-notif
+{
+    height:25px; width:25px;
+}
+
+
+/*---------------heading----------------*/
+.dhead
+{
+    font-size: 18px;
+}
+
+input[type=search] 
+{
+    padding: 9px 21px 11px 31px;
+}
+
+
+
+/*---------------table------------------*/
+.table-headin
+{
+    font-size: 10px;
+    font-weight: 300;
+    padding: 0.6rem;
+    /*border-bottom: 3px solid var(--primarycolor);*/
+    background-color: var(--xblue);
+}
+
+.table-con td
+{
+    padding: 0.1rem;
+    font-size: 11px;
+}
+
+.abc
+{
+    width: 100%;
+    height: 29rem;
+    overflow: auto;
+}
+
+
+/*------------------------buttons----------------------*/
+
+
+.add-btn
+{
+    border-style: none;
+    padding: 0.2rem;
+    margin-left: 1%;
+    border-radius: 20px;
+    background-color: var(--xblue);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.act-butt
+{
+    border-style: none;
+    background-color: transparent;
+    margin-left: 0.2rem;
+}
+
+.gen-butt
+{
+    border-radius: 0 1.5rem 0 0;
+    width: 7rem;
+    padding: 4.5px;
+}
+
+.back-img
+{
+    height: 1.5rem;
+}
+
+
+/*------------------containers-------------------------*/
+
+.menu-container
+{
+    margin-top: 0.9rem;
+}
+
+.menu-text
+{
+    font-size: 11px;
+}
+
+.dashboard-items
+{
+    padding: 30px;
+    width: 30%;
+}
+
+.drop
+{
+    list-style: none;
+    padding-left: 20px;
+    animation: transitionIn-X 0.5s;
+    font-size: 14px;
+}
+
+.butt-active a
+{
+   font-size: 12px;
+   font-weight: 500;
+}
+
+.butt a
+{
+   font-size: 12px;
+   font-weight: 500;
+}
+
+.btn
+{
+    font-size: 13px;
+    border-style: none;
+    background-color: transparent;
+    color: var(--white);
+    padding: 8px;
+    border-radius: 5px;
+    background-color: var(--xblue);
+    text-decoration: none;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.btn-inactive
+{
+    font-size: 13px;
+    border-style: none;
+    background-color: transparent;
+    color: var(--white);
+    padding: 8px;
+    border-radius: 5px;
+    background-color: var(--bgray);
+    text-decoration: none;
+    margin: 3px;
+}
+
+
+}

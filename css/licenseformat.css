@@ -1,0 +1,74 @@
+:root
+{
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --xblue: #025193;
+    --xblue2: #0058A1;
+    --tgray: #F5F5F5;
+    --xgreen:#3E897B;
+    --bgray: #DCDBD7;
+    --sgreen: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    --stgreen: #58A773;
+    --yellow: #F8BD00;
+    --red: #E33629;
+    --dropwhite: rgba(255,255, 255, 1);
+    --dropgray: #EEEEEE;
+    --labelgray:#6c757d;
+
+}
+
+.license-container
+{
+    width: 800px; height: 495px; background-color:white; border-color: var(--labelgray); border: 1px solid var(--labelgray);
+}
+
+.license-logo
+{
+    width: auto; height:70px;
+}
+
+.license-header
+{
+    color: black; margin: 0; font-size: 15px; font-weight: 500;
+}
+
+.license-header-2
+{
+    color: black; margin: 0; font-size: 18px;
+}
+
+.license-labels
+{
+    color:var(--labelgray);  margin: 0; font-size: 13px; font-weight: 500;
+}
+
+.license-titles
+{
+    color: black; margin:0; font-size: 13px;
+}
+
+.license-entities
+{
+    color: black; font-size: 15px;
+}
+
+@media print {
+    .license-container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        /* Other print-specific styles */
+    }
+
+    /* Ensure the images are fully displayed */
+    .license-logo {
+        width: 100px; /* Adjust as needed */
+    }
+}
+
+@page {
+    size: landscape;
+}

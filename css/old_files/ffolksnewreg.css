@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root
+{
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --xblue: #025193;
+    --tgray: #F5F5F5;
+    --xgreen:#3E897B;
+    --bgray: #DCDBD7;
+    --sgreen: background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+
+    --stgreen: #58A773;
+}
+
+.newreg-con-items
+  {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 7rem;
+    animation: transitionIn-Y-over 0.5s;
+  }
+
+.newreg-card
+  {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    height: 25rem;
+    background-color: var(--white);
+    margin: 30px;
+    border-radius: 10px;
+    padding-top: 6rem;
+    color: var(--xblue);
+    padding-left: 3rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+.newreg-con-items a 
+{
+    color: var(--xblue);
+    text-decoration: none;
+}
+
+.newreg-con-items a :hover
+{
+    transform: translateY(-2px);
+    text-decoration: underline;
+    text-decoration-color: var(--xgreen);
+    transition: 0.3s;
+}
+
+
+  /***--------------------------------------------------------------------------Reponsive-Area----------------------------------------------------------*****/
+@media only screen and (max-width: 1366px)
+{
+  
+.newreg-con-items
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 7rem;
+    animation: transitionIn-Y-over 0.5s;
+}
+
+.newreg-card
+{ 
+    font-size: 11px;
+    width: 17rem;
+    height: 17rem;
+    margin: 15px;
+    border-radius: 10px;
+    padding-top: 2.5rem;
+}
+
+
+}

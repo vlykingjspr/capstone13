@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root
+{
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --xblue: #025193;
+    --xblue2: #0058A1;
+    --tgray: #F5F5F5;
+    --xgreen:#3E897B;
+    --bgray: #DCDBD7;
+    --sgreen: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    --stgreen: #58A773;
+    --yellow: #F8BD00;
+    --red: #E33629;
+    --dropwhite: rgba(255,255, 255, 1);
+    --dropgray: #EEEEEE;
+    --labelgray:#6c757d;
+
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);     
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.modal-head
+{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color:var(--xblue)
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; 
+    padding: 10px;
+    border: 1px solid #888;
+    min-width: 25rem;
+    border-radius: 10px;
+    
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.viewclose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.viewclose:hover,
+.viewclose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.spacing-right
+{
+    padding-right: 1rem;
+}
+
+.input-xx
+{
+    width:100%;
+    height: 30px;
+    outline:none;
+    background-color: var(--tgray);
+    border-style: none;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.spacing
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.modal-label
+{
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--labelgray) !important;
+}
+
+.modal-status
+{
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--xblue) !important;
+}
+
+.modal-label1
+{
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--stgreen) !important;
+}
+
+@media only screen and (max-width: 1366px)
+{
+    .modal-label
+    {
+        font-size: 12px;
+        font-weight: 300;
+        color: var(--labelgray);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto; 
+        padding: 8px;
+        border: 1px solid #888;
+        min-width: 25rem;
+        border-radius: 10px; 
+    }
+
+    .input-xx
+    {
+        width:100%;
+        height: 30px;
+        outline:none;
+        background-color: var(--tgray);
+        border-style: none;
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .modal-head
+    {
+        font-size: 14px
+    }
+
+}

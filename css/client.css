@@ -1,0 +1,146 @@
+:root
+{
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --xblue: #025193;
+    --xblue2: #0058A1;
+    --tgray: #F5F5F5;
+    --xgreen:#3E897B;
+    --bgray: #DCDBD7;
+    --sgreen: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    --stgreen: #58A773;
+    --yellow: #F8BD00;
+    --red: #E33629;
+}
+
+.client-name
+{
+    color: black; font-weight: 700; font-size: 25px;margin:0; 
+}
+
+.client-prof-img
+{
+    height: 40px; 
+    width: 40px; 
+    border-radius:50%;
+}
+.client-profile
+{
+    height: 12rem; width: 12rem; border: var(--xblue); border-style: groove; border-radius: 5px;
+}
+
+.client-role
+{
+    color: #025193; font-weight: 600; font-size: 20px ;
+}
+
+.client-address
+{
+    color: black; font-weight: 400;font-size: 16px ;
+}
+
+.client-contact
+{
+    color: black;  font-weight: 400;font-size: 16px;
+}
+
+.dash-title
+{
+    color:#6c757d; font-weight:500; 
+}
+
+.permits
+{
+    color:black; text-wrap: wrap; margin:0; padding-top:10px; font-size: 14px;
+}
+
+.permit-title
+{
+    color: var(--xblue); text-wrap: wrap; margin:0;font-weight: 600; padding-top:10px; font-size: 15px;
+}
+
+.client-cards
+{
+    color: black; 
+    border-radius: 10px; 
+    min-width: 20rem;
+    height: auto; 
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 2px solid #c9cbce9f;
+    margin:5px;
+}
+
+.status
+{
+    font-size: 14px; color: var(--labelgray) !important; margin:0; padding-inline:1rem;
+}
+
+.status-label
+{
+    font-size: 13px; color:var(--stgreen); margin:0;
+}
+
+.div-client-status-spacing
+{
+    margin-bottom: 10px;
+}
+@media only screen and (max-width: 1366px)
+{
+    .client-name
+    {
+        font-size: 14px;
+        color: black; 
+        font-weight: 800;
+    }
+
+    .client-profile
+    {
+        height: 8rem; width: 8rem;
+    }
+
+    .client-role
+    {
+        color: #025193; font-weight: 700; font-size: 13px;;
+    }
+    
+    .client-address
+    {
+        color: black; font-size: 13px; ;
+    }
+
+    .client-contact
+    {
+        color: black; font-size: 13px; ;
+    }
+
+    .dash-title
+    {
+        color:#6c757d; font-weight:500; font-size:12px;
+    }
+
+    .permit-title
+    {
+        color: var(--xblue); text-wrap: wrap; margin:0;font-weight: 600; padding-top:10px; font-size: 11px;
+    }
+
+    .permits
+    {
+        color:black; font-size: 11px; margin:0;
+    }
+
+    .status
+    {
+        font-size: 12px; color:var(--labelgray); margin:0;
+    }
+    
+    .status-label
+    {
+        font-size: 12px; color:var(--stgreen); margin:0;
+    }
+
+    
+    
+}
