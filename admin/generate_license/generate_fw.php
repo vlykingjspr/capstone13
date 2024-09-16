@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '../../vendor/autoload.php'; // Adjust the path if necessary
+require_once __DIR__ . '/../../vendor/autoload.php'; // Adjust the path if necessary
 
-use Mpdf\Mpdf;
+use mpdf\mpdf;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve form data sent from the client-side (e.g., via AJAX)
@@ -11,8 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $restrictionsString = $_POST['restrictions'];
     $validatedBy = $_POST['validatedBy'];
 
-    // Create an instance of the mPDF class
-    $mpdf = new Mpdf();
+    $mpdf = new mpdf();
 
     // Define the HTML content
     $html = '
@@ -31,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <div style="display: flex; align-items: center;">
                 <div style="text-align:center; margin:auto">
-                    <h2> APPLICATION FOR FISHER\'S LICENSE</h2>
+                    <h2> APPLICATION FOR FISHER\'S LICENSE ssad</h2>
                 </div>
             </div>
             <div>
