@@ -287,7 +287,7 @@
 
                             <h2 class="modal-heading">RESTRICTIONS</h2>
                             <!-- <form id="restrictionsForm" action="license/license_ff.php" method="POST"> -->
-                            <form id="restrictionsForm" action="generate_license/generate_fw.php" method="POST">
+                            <form id="restrictionsForm" action="generate_license/generate_license_fw.php" method="POST">
                                 <div style="display:block;">
                                     <div class="fg-fields-check-slim">
                                         <label class="check-box">(1) SUBSISTENCE
