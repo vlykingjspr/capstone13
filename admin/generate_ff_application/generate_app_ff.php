@@ -41,7 +41,7 @@ if (isset($_POST['ff_id'])) {
 
 
         // Initialize TCPDF
-        $pdf = new TCPDF();
+        $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, 'LEGAL', true, 'UTF-8', false);
 
         // Set document information
         $pdf->SetCreator(PDF_CREATOR);
