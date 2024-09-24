@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,37 +12,33 @@
     <script src="../includes/sweetalert2.min.js"></script>
     <script src="../js/global/prof-drp.js" defer></script>
     <script src="../js/global/search.js" defer></script>
-    
+
     <title>Fishing Vessel</title>
 
-    
+
 </head>
 
 <body>
 
-<?php
+    <?php
 
-session_start();
+    session_start();
 
-if(isset($_SESSION["user"]))
-{
-    if(($_SESSION["user"])=="" or $_SESSION['usertype']!='CAGRO - Administrator'){
+    if (isset($_SESSION["user"])) {
+        if (($_SESSION["user"]) == "" or $_SESSION['usertype'] != 'CAGRO - Administrator') {
+            header("location: ../login.php");
+        }
+    } else {
         header("location: ../login.php");
     }
 
-}else
-{
-    header("location: ../login.php");
-}
+    include("../conn.php");
 
-include("../conn.php");
-
-//admin-profile
-$userEmail = $_SESSION["user"];
-$query = "";
-if ($_SESSION['usertype']== 'CAGRO - Administrator') 
-    {
-    $query = "SELECT u_prof, u_fname AS fname, u_lname AS lname, u_role AS urole, u_email AS uemail  
+    //admin-profile
+    $userEmail = $_SESSION["user"];
+    $query = "";
+    if ($_SESSION['usertype'] == 'CAGRO - Administrator') {
+        $query = "SELECT u_prof, u_fname AS fname, u_lname AS lname, u_role AS urole, u_email AS uemail  
               FROM users WHERE u_email = ?";
     }
 
@@ -49,7 +46,7 @@ if ($_SESSION['usertype']== 'CAGRO - Administrator')
     $stmt->bind_param("s", $userEmail);
     $stmt->execute();
     $result = $stmt->get_result();
-    
+
     if ($result->num_rows > 0) {
         $userData = $result->fetch_assoc();
     } else {
@@ -60,154 +57,165 @@ if ($_SESSION['usertype']== 'CAGRO - Administrator')
     $sql1 = "SELECT id, fb_opfname, fb_opmname, fb_oplname, fb_opbarangay, fb_opstreet, fb_vesselname, fb_vesseltype,fb_enginemake, fb_serial, fb_RL,fb_TL,fb_RB, fb_TB, fb_RD, fb_TD, fb_GT, fb_NT, fb_horsepower FROM fishingboats";
     $result = $conn->query($sql1);
 
-?>
+    ?>
 
 
-    <div class = "container">
+    <div class="container">
 
         <!-----------------------------------------------------------side-nav---------------------------------------------------------------------------->
-<div class="menu">
-    <table class="menu-container" border="0">
+        <div class="menu">
+            <table class="menu-container" border="0">
 
-        <tr> <!--cagro logo-->
-            <td>
-                <div style="padding-top:1rem;">
-                    <img src="../img/plmslog.jpg" class="selector menu-logo">
-                </div>
-            </td>
-        </tr>
+                <tr> <!--cagro logo-->
+                    <td>
+                        <div style="padding-top:1rem;">
+                            <img src="../img/plmslog.jpg" class="selector menu-logo">
+                        </div>
+                    </td>
+                </tr>
 
-        <tr class="menu-row">
-            <td class="menu-btn">
-                <a href="index.php" class="non-style-link-menu non-style-link-menu-active">
-                    <div><p class="menu-text">Dashboard</p></div>
-                </a>
-            </td>
-        </tr>
+                <tr class="menu-row">
+                    <td class="menu-btn">
+                        <a href="index.php" class="non-style-link-menu non-style-link-menu-active">
+                            <div>
+                                <p class="menu-text">Dashboard</p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
 
-        <tr class="menu-row">
-            <td class="menu-btn">
-                <div class="dropdown menu-text non-style-link-menu">
-                    <p style="cursor:default;">Clients</p>
-                    <div class="dropdown-content">
-                        <a class="ref" href="fisherfolks.php">Fisherfolks</a>
-                        <a class="ref" href="fishworkers.php">Fishworkers</a>
-                    </div>
-                </div>
-            </td>
-        </tr>
+                <tr class="menu-row">
+                    <td class="menu-btn">
+                        <div class="dropdown menu-text non-style-link-menu">
+                            <p style="cursor:default;">Clients</p>
+                            <div class="dropdown-content">
+                                <a class="ref" href="fisherfolks.php">Fisherfolks</a>
+                                <a class="ref" href="fishworkers.php">Fishworkers</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
 
-        <tr class="menu-row  menu-active">
-           <td class="menu-btn">
-                <div class="dropdown menu-text non-style-link-menu">
-                    <p style="cursor:default;">Permit</p>
-                    <div class="dropdown-content">
-                        <a class="ref" href="fishinggears.php">Fishing Gear</a>
-                        <a class="ref" href="fishingboats.php">Fishing Vessel</a>
-                        <a class="ref" href="fishingcages.php">Fish Cages</a>
-                    </div>
-                </div>
-            </td>
-        </tr>
-        
-        <tr class="menu-row">
-           <td class="menu-btn">
-                <a href="licensing.php" class="non-style-link-menu"><div><p class="menu-text">Licensing</p></div></a>
-            </td>
-        </tr>
-        <tr class="menu-row">
-            <td class="menu-btn">
-                <a href="Activity.php" class="non-style-link-menu"><div><p class="menu-text">Activity Log</p></div></a>
-            </td>
-        </tr>
-        <tr class="menu-row">
-            <td class="menu-btn">
-                <a href="requirements.php" class="non-style-link-menu"><div><p class="menu-text">Requirements & Fees</p></div></a>
-            </td>
-        </tr>
-    </table>
-</div>
+                <tr class="menu-row  menu-active">
+                    <td class="menu-btn">
+                        <div class="dropdown menu-text non-style-link-menu">
+                            <p style="cursor:default;">Permit</p>
+                            <div class="dropdown-content">
+                                <a class="ref" href="fishinggears.php">Fishing Gear</a>
+                                <a class="ref" href="fishingboats.php">Fishing Vessel</a>
+                                <a class="ref" href="fishingcages.php">Fish Cages</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
 
-                
+                <tr class="menu-row">
+                    <td class="menu-btn">
+                        <a href="licensing.php" class="non-style-link-menu">
+                            <div>
+                                <p class="menu-text">Licensing</p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="menu-row">
+                    <td class="menu-btn">
+                        <a href="Activity.php" class="non-style-link-menu">
+                            <div>
+                                <p class="menu-text">Activity Log</p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+                <tr class="menu-row">
+                    <td class="menu-btn">
+                        <a href="requirements.php" class="non-style-link-menu">
+                            <div>
+                                <p class="menu-text">Requirements & Fees</p>
+                            </div>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
         <!-------------------------------------------------------------Dashboard-Contents--------------------------------------------------------->
 
-            <div class = "dash-body">
-          
-                <table border="0" width="100%" style="border-spacing: 0; margin: 0; padding: 0;">
+        <div class="dash-body">
 
-                        <tr>
-                            <td>
-                                <div class="style-inline" style="display: flex; justify-content: space-between">
-                                    <div class="animx">
-                                        <p style="color: #3E897B; font-weight: bold;" class="dhead">CAGRO ◌ FISHING VESSEL</p>
-                                    </div>
-                                    
+            <table border="0" width="100%" style="border-spacing: 0; margin: 0; padding: 0;">
 
-                                    <div class="profile-menu">
-                                        <div class="profile-menu-items"><!--notification-->
-                                            <img src="../img/icons/notif.svg" class="space img-notif selector">
-                                        </div>
+                <tr>
+                    <td>
+                        <div class="style-inline" style="display: flex; justify-content: space-between">
+                            <div class="animx">
+                                <p style="color: #3E897B; font-weight: bold;" class="dhead">CAGRO ◌ FISHING VESSEL</p>
+                            </div>
 
-                                        <div class="profile-menu-items" onclick="toggleDropdown()"><!--profile-menu-->
-                                            <?php 
-                                                if (!empty($userData['u_prof']))
-                                                {
-                                                    echo '<img class="sechead-prof-img selector" src="../uploads/' . htmlspecialchars($userData['u_prof']) . '" alt="Profile Image">';
-                                                }
-                                                else
-                                                {
-                                                    echo '<img src="../img/user.png" class="space img-profile selector">';
-                                                }
-                                            ?>
-                                            <img src="../img/icons/arrow-down.svg" style="height:20px;width:20px; margin:auto;" class="space selector">
-                                        </div>
-                                    </div>
 
-                                    <div class="dropdown-content-prof" id="dropdown-prof">
-                                        <div class="prof-divider">
-                                            <img src="../img/user.png" class="space img-profile selector">
-                                            <div style="display: block; margin: auto">
-                                                <p style="color: black; font-size: 15px; font-weight: bold; text-wrap: wrap;" class="space"><?php echo $userData['lname'] . ', ' . $userData['fname'] ?></p>
-                                            </div>
-                                        </div>
-                                        
-                                        <a href="#profile">My Profile</a>
-                                        <a href="#settings">Settings</a>
-                                        <a href="../logout.php">Logout</a>
-                                    </div>
-
-                                </div>      
-                            </td>  
-                        </tr>
-
-                        <tr>
-                            <td class="style-inline">
-                                <input type="search" name="search" id="searchInput" class="input-text header-searchbar" placeholder="Search" onkeyup="searchTable()">
-                            </td>
-                        </tr>
- 
-                        <!----------------------------------------------------table-------------------------------------------------------------------------->
-                        <tr>
-                            <td colspan="4">
-                               <center>
-                               <div style="margin:auto; float: right" class="space-top">
-                                    <button><a>sort</a></button>
+                            <div class="profile-menu">
+                                <div class="profile-menu-items"><!--notification-->
+                                    <img src="../img/icons/notif.svg" class="space img-notif selector">
                                 </div>
 
-                                <div class="abc">
-                                    <table width="100%" class="sub-table scrolldown animy" cellspacing="0">
+                                <div class="profile-menu-items" onclick="toggleDropdown()"><!--profile-menu-->
+                                    <?php
+                                    if (!empty($userData['u_prof'])) {
+                                        echo '<img class="sechead-prof-img selector" src="../uploads/' . htmlspecialchars($userData['u_prof']) . '" alt="Profile Image">';
+                                    } else {
+                                        echo '<img src="../img/user.png" class="space img-profile selector">';
+                                    }
+                                    ?>
+                                    <img src="../img/icons/arrow-down.svg" style="height:20px;width:20px; margin:auto;" class="space selector">
+                                </div>
+                            </div>
+
+                            <div class="dropdown-content-prof" id="dropdown-prof">
+                                <div class="prof-divider">
+                                    <img src="../img/user.png" class="space img-profile selector">
+                                    <div style="display: block; margin: auto">
+                                        <p style="color: black; font-size: 15px; font-weight: bold; text-wrap: wrap;" class="space"><?php echo $userData['lname'] . ', ' . $userData['fname'] ?></p>
+                                    </div>
+                                </div>
+
+                                <a href="#profile">My Profile</a>
+                                <a href="#settings">Settings</a>
+                                <a href="../logout.php">Logout</a>
+                            </div>
+
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="style-inline">
+                        <input type="search" name="search" id="searchInput" class="input-text header-searchbar" placeholder="Search" onkeyup="searchTable()">
+                    </td>
+                </tr>
+
+                <!----------------------------------------------------table-------------------------------------------------------------------------->
+                <tr>
+                    <td colspan="4">
+                        <center>
+                            <div style="margin:auto; float: right" class="space-top">
+                                <!-- <button><a>sort</a></button> -->
+                            </div>
+
+                            <div class="abc">
+                                <table width="100%" class="sub-table scrolldown animy" cellspacing="0">
                                     <thead class="headert">
-                                    <tr>
+                                        <tr>
                                             <th class="table-headin">
                                                 ID
                                             </th>
                                             <th class="table-headin">
                                                 BOAT NUMBER
                                             </th>
-                                            <th class="table-headin">                                               
+                                            <th class="table-headin">
                                                 NAME
                                             </th>
-                                            
+
                                             <th class="table-headin">
                                                 ADDRESS
                                             </th>
@@ -257,7 +265,7 @@ if ($_SESSION['usertype']== 'CAGRO - Administrator')
                                                 OR NUMBER
                                             </th>
                                             <th class="table-headin">
-                                               ACTIONS
+                                                ACTIONS
                                             </th>
                                             <th class="table-headin">
                                                 STATUS
@@ -266,11 +274,9 @@ if ($_SESSION['usertype']== 'CAGRO - Administrator')
                                     </thead>
 
                                     <tbody class="table-con" id="dataTable">
-                                    <?php 
-                                        if ($result->num_rows > 0) 
-                                        {
-                                            while($row = $result->fetch_assoc()) 
-                                            {
+                                        <?php
+                                        if ($result->num_rows > 0) {
+                                            while ($row = $result->fetch_assoc()) {
                                                 $name = $row['fb_opfname'] . ' ' . $row['fb_opmname'] . ' ' . $row['fb_oplname'];
                                                 $location = $row['fb_opstreet'] . ', ' . $row['fb_opbarangay'];
 
@@ -307,25 +313,23 @@ if ($_SESSION['usertype']== 'CAGRO - Administrator')
                                                 </td>';
                                                 echo '</tr>';
                                             }
-                                        } 
-                                        else 
-                                        {
+                                        } else {
                                             echo '<tr><td colspan="20">No records found</td></tr>';
                                         }
-  
-                                        ?> 
-                                                                     
+
+                                        ?>
+
                                     </tbody>
 
-                                    </table>
-                                </div>
-                               </center>
-                            </td>
-                        </tr>
+                                </table>
+                            </div>
+                        </center>
+                    </td>
+                </tr>
 
-                </table>
+            </table>
 
-           
+
 
         </div>
     </div>
@@ -350,17 +354,17 @@ if ($_SESSION['usertype']== 'CAGRO - Administrator')
                 }
             }).then((result) => {
                 if (result.isConfirmed) {
-                 
+
                     const xhr = new XMLHttpRequest();
-                    xhr.open("GET", "functions/delete.php?action=delete&id=" + id + "&type=" + type, true);  
-                    xhr.onload = function () {
+                    xhr.open("GET", "functions/delete.php?action=delete&id=" + id + "&type=" + type, true);
+                    xhr.onload = function() {
                         if (xhr.status === 200) {
                             Swal.fire(
                                 'Deleted!',
                                 'The record has been deleted.',
                                 'success'
                             ).then(() => {
-                                location.reload(); 
+                                location.reload();
                             });
                         } else {
                             Swal.fire(
@@ -376,4 +380,5 @@ if ($_SESSION['usertype']== 'CAGRO - Administrator')
         }
     </script>
 </body>
+
 </html>

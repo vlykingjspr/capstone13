@@ -85,5 +85,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pdf->writeHTML($htmlTemplate, true, false, true, false, '');
 
     // Output the PDF to browser
-    $pdf->Output('license_' . $user_id . '.pdf', 'I');
+    $pdf->Output('license_' . $user_id . '.pdf', 'D');
 }

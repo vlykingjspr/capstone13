@@ -197,7 +197,7 @@
                         <td>
                             <center>
                                 <div style="margin:auto; float: right" class="space-top">
-                                    <button><a>sort</a></button>
+                                    <!-- <button><a>sort</a></button> -->
                                 </div>
                                 <div class="abc">
                                     <table width="100%" class="sub-table scrolldown animy" cellspacing="0">
@@ -228,7 +228,7 @@
                                                     ACTIONS
                                                 </th>
                                                 <th class="table-headin">
-                                                    GENERATE
+
                                                 </th>
                                             </tr>
                                         </thead>
@@ -260,7 +260,7 @@
                                                     </td>';
 
                                                     echo '<td><!-- status -->
-                                                            <span class="gen-license-btn stats-complete" data-id="' . htmlspecialchars($row['client_id']) . '">Generate</span>
+                                                            <span class="gen-license-btn btn btn-primary stats-complete" data-id="' . htmlspecialchars($row['client_id']) . '">Generate</span>
                                                         </td>';
                                                     echo '</tr>';
                                                 }
