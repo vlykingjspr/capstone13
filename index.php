@@ -1,61 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>CAGRO PLMS</title>
-    <link rel="stylesheet" type="text/css" href="css/dash1.css">
-    <link rel = "stylesheet" type = "text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
+<body class="bg-light">
+    <!-- Main Container -->
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <!-- White box wrapper -->
+        <div class="bg-white p-5 rounded shadow text-center">
+            <!-- Logos -->
+            <div class="d-flex justify-content-center mb-4">
+                <a href="https://panabocity.gov.ph/">
+                    <img src="img/panabs.png" class="img-fluid me-3" alt="Panabo City Logo" style="max-height: 80px;">
+                </a>
+                <a href="https://www.bfar.da.gov.ph/national-mariculture-center/">
+                    <img src="img/bfar.png" class="img-fluid" alt="BFAR Logo" style="max-height: 80px;">
+                </a>
+            </div>
 
-<body>
-    <!--header-section-->
-<div class="main-con">
-    
-    <div class ="nav">
-        <ul class = "nav-bar">
-            <li><a>About</a></li>
-            <li><a class ="" href="signup.php">Sign Up</a></li>
-        </ul>
-    </div>
+            <!-- System Title and Description -->
+            <div class="mb-4">
+                <img src="img/cagroplms.png" class="img-fluid mb-3" alt="CAGRO Logo" style="max-height: 150px;">
+                <p class="text-muted">Permit and Licensing Management System <br>
+                    of City Agriculture Office (CAGRO) Fisheries Section, <br>
+                    Panabo City, Davao del Norte</p>
+            </div>
 
-    <div class="t-con">
-
-    <div class="ico-head">
-        <a href="https://panabocity.gov.ph/"><img class="ico-img selector" src="img/panabs.png"></a>
-        <a href="https://www.bfar.da.gov.ph/national-mariculture-center/"><img class="ico-img selector" src="img/bfar.png"></a>
-    </div>
-
-    <div class = sys-title>
-        <div class="log">
-            <img class="selector cagro-logo" src="img/cagroplms.png">
-        </div>
-       
-        <div class="desc">
-            <p class="sys-2">Permit and Licensing management System <br> 
-            of City Agriculture Office(CAGRO) Fishieries <br> 
-            Section, Panabo City, Davao del Norte</p>
-        </div>
-    </div>
-        
-    <div class ="b-con-1 space-top">
-        <div>
-            <h2>Hello, have an Auqafantastic day ahead!<a style="color: gray;" href="signup.php"> Sign Up</a></h2>
-        </div>
-        
-        <div class="b-con-1-butt" style="padding-top: 1rem;">
-            <h3 class="greetings">Already have an account?<a href="login.php" style="text-decoration: underline; color: #025193;"> Log In</a></h3>
+            <!-- Buttons -->
+            <div class="d-flex justify-content-center gap-3">
+                <a href="login.php" class=" btn btn-primary btn-lg">Log In</a>
+                <a href="signup.php" class="btn btn-secondary btn-lg">Sign Up</a>
+            </div>
         </div>
     </div>
-    <!--button-section-->
-       
-    </div>
-</div>     
 
-<!--ionicons-script-->
-
-
+    <!-- Optional Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
