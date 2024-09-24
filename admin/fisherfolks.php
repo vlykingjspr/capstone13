@@ -301,7 +301,7 @@
                                                         style="cursor: pointer;" 
                                                         onclick="confirmDelete(' . htmlspecialchars($row['ff_id']) . ', \'fisherfolk\')"></i>
 <!-- Generate Button -->
-                    <form action="generate_application/generate_app_ff.php" method="post" style="margin-left: 10px;">
+                    <form action="generate_ff_application/generate_app_ff.php" method="post" style="margin-left: 10px;">
                         <input type="hidden" name="ff_id" value="' . htmlspecialchars($row['ff_id']) . '">
                         <button type="submit" class="btn btn-primary">Generate</button>
                     </form>

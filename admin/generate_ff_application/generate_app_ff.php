@@ -66,7 +66,7 @@ if (isset($_POST['ff_id'])) {
         // $pdf->writeHTML($html, true, false, true, false, '');
 
         // Close and output the PDF
-        $pdf->Output('fisherfolk_data_' . $ff_id . '.pdf', 'I'); // 'I' to output in browser, 'D' to force download
+        $pdf->Output('fisherfolk_data_' . $ff_id . '.pdf', 'D'); // 'I' to output in browser, 'D' to force download
 
     } else {
         echo "No data found for the given ID.";
