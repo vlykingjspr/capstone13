@@ -314,7 +314,7 @@
 <!-- Add Generate Button -->
     <form action="generate_fw_application/generate_app_fw.php" method="POST" style="display:inline-block;">
         <input type="hidden" name="fw_id" value="' . htmlspecialchars($row['fw_id']) . '">
-        <button type="submit" class="btn-generate">Generate</button>
+        <button type="submit" class="btn btn-primary">Generate</button>
     </form>
                                                 </div>
                                                 </td>';
